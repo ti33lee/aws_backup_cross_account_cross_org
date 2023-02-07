@@ -1,4 +1,4 @@
-#creating dummy lambda for test
+#creating dummy env for test - requires networking and rds
 
 resource "aws_vpc" "main" {
 cidr_block = "10.0.0.0/16"
