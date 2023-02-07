@@ -185,7 +185,7 @@ resource "aws_lambda_permission" "allow_bucket_triggers" {
     provider = aws.backup  
     statement_id  = "AllowExecutionFromS3Bucket"
     action        = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.lambda_copy2s3.arn
+    function_name = aws_lambda_function.lambda_copy2s3[0].arn
     principal     = "s3.amazonaws.com"
     source_arn    = aws_s3_bucket.bucket.arn
 }
